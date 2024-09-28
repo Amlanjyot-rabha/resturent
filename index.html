@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Restoran - Bootstrap Restaurant Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add some styles to highlight the matched item */
+        .highlight {
+            border: 2px solid #ffcc00; /* Change to desired highlight style */
+            background-color: #f9f9a5; /* Optional: background color change */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>kkwebmart</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="menu.html" class="nav-item nav-link active">Menu</a>
+                    </div>
+                       <form id="searchForm" class="d-flex">
+                            <input type="text" class="form-control me-2" id="searchQuery" placeholder="Search menu items">
+                            <button type="submit" class="btn btn-outline-light">
+                            <i class="fa fa-search"></i>
+                            </button>
+                       </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container my-5 py-5">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="display-3 text-white animated slideInLeft" style="margin-top: -90px;">Food Menu</h1>
+                            <p class="text-white animated slideInLeft mb-4 pb-2">Delicious Appetizers, Hearty Main Courses, Fresh Salads, and Decadent Desserts.</p>
+                            <a href="#menu" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">See the Menu</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                            <img class="img-fluid" src="img/hero.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+        <!-- Navbar & Hero End -->
+                <!-- Menu Start -->
+                <div class="container-xxl py-5" id="menu">
+                    <div class="container">
+                        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <h6 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h6>
+                            <h1 class="mb-5">Most Popular Items</h1>
+                        </div>
+                        <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+
+                            <!-- food category -->
+                            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5" id="wraper">
+
+                                <li class="nav-item"  onclick="scrollToBottom()" >
+                                    <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                                        <i class="fa fa-solid fa-carrot fa-2x text-primary"></i>
+                                        <div class="ps-3"> 
+                                            <small >All Popular</small>
+                                            <h6>Veg</h6>
+                                        </div>
+                                    </a>
+                                </li>                 
+                                
+                                <li class="nav-item item-2"  id="nav-item-2"   onclick="scrollToBottom()" >
+                                    <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                                        <i class=" fa fa-solid fa-drumstick-bite fa-2x text-primary"></i>
+                                        <div class="ps-3">
+                                            <small >All Special</small>
+                                            <h6 class="mt-n1 mb-0">Non-Veg</h6>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item item-3"   onclick="scrollToBottom()">
+                                    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                                        <i class=" fa fa-solid fa-wine-glass fa-2x text-primary"></i>
+                                        <div class="ps-3">
+                                            <!-- <small >Lovely</small> -->
+                                            <h6 class="mt-n1 mb-0">Drinks</h6>
+                                        </div>
+                                    </a>
+                                </li>
+
+
+                                <li class="nav-item  item-4"   onclick="scrollToBottom()">
+                                    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-4">
+                                        <i class=" fa fa-solid fa-pizza-slice fa-2x text-primary"></i>
+                                        <div class="ps-3">
+                                            <!-- <small >Lovely</small> -->
+                                            <h6 class="mt-n1 mb-0">sandwich & Pizza</h6>
+                                          
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item item-5"   onclick="scrollToBottom()">
+                                    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-5" id="desert">
+                                        <i class="fa fa-solid fa-ice-cream fa-2x text-primary"></i>
+                                        <div class="ps-3" style="margin-right:5px;">
+                                            <!-- <small>Lovely</small> -->
+                                            <h6 class="mt-n1 mb-0">Desert</h6>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item item-6"  onclick="scrollToBottom()">
+                                    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-6">
+                                        <i class="fa fa-solid fa-mug-hot fa-2x text-primary"></i>
+                                        <div class="ps-3">
+                                            <!-- <small>Lovely</small> -->
+                                            <h6 class="mt-n1 mb-0">Gravies & Curries</h6>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item item-6"  onclick="scrollToBottom()">
+                                    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-7">
+                                        <i class="fa fa-solid fa-carrot fa-2x text-primary"></i>
+                                        <div class="ps-3">
+                                           
+                                            <h6 class="mt-n1 mb-0">Papad, Salad</h6>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item item-6"  onclick="scrollToBottom()">
+                                    <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-8">
+                                        <i class=" fa fa-solid fa-wine-glass fa-2x text-primary"></i>
+                                        <div class="ps-3">
+                                            <!-- <small>Lovely</small> -->
+                                            <h6 class="mt-n1 mb-0">Shake & Mocktail</h6>
+                                        </div>
+                                    </a>
+                                </li>
+
+                               
+                                
+                            </ul>
+                            <div class="tab-content ">
+                                <div id="tab-1" class="tab-pane fade show p-0 active">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG ROLL</span>
+                                                        <span class="text-primary">₹60</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG. KATHI ROLL</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>STREAM VEG. MOMO</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>FRIED VEG. MOMO</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG. HAKKA NOODLES</span>
+                                                        <span class="text-primary">₹160</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG MANCHURIAN NOODLES</span>
+                                                        <span class="text-primary">₹180</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG SZECHWAN NOODLES</span>
+                                                        <span class="text-primary">₹220</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG. CHINESE CHOPSUEY</span>
+                                                        <span class="text-primary">₹220</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG. AMERICAN CHOPSUEY</span>
+                                                        <span class="text-primary">₹250</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG POKODA</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/veg.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PLAIN RICE</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div><div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>JEERA RICE</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div><div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/veg.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG FRIED RICE</span>
+                                                        <span class="text-primary">₹160</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div><div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/veg.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG PULAO</span>
+                                                        <span class="text-primary">₹200</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/veg.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG BIRIYANI</span>
+                                                        <span class="text-primary">₹220</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>TAWA ROTI</span>
+                                                        <span class="text-primary">₹15</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/naan.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PLAIN NAAN</span>
+                                                        <span class="text-primary">₹60</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/naan.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>BUTTER NAAN</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PLAIN KULCHAA</span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/naan.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>BUTTER GARLIC NAAN</span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>DRY PAPAD</span>
+                                                        <span class="text-primary">₹15</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>FRY PAPAD</span>
+                                                        <span class="text-primary">₹20</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>MASALA PAPAD</span>
+                                                        <span class="text-primary">₹50</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>CUCUMBER SALAD</span>
+                                                        <span class="text-primary">₹60</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/salad.png" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>GREEN SALAD</span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/salad.png" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEGETABLE' SALAD</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/salad.png" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>FRUITS SALAD</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/raita.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>ONION RAITA</span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/raita.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>CUCUMBER RAITA</span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/raita.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>BOONDI RAITA</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG. MANCHURIAN</span>
+                                                        <span class="text-primary">₹200</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/paneer.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>MATAR PANEER</span>
+                                                        <span class="text-primary">₹200</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/paneer.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PANEER DO PYAZA</span>
+                                                        <span class="text-primary">₹250</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/paneer.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>KADAI PANEER</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/paneer.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                  <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>SHAHI PANEER</span>
+                                                        <span class="text-primary">₹320</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-2" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/roll.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Roll</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/roll.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Kathi Roll</span>
+                                                        <span class="text-primary">₹150</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/roll.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Spring Roll</span>
+                                                        <span class="text-primary">₹150</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Stream Chicken MOMO</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Fried Chicken MOMO</span>
+                                                        <span class="text-primary">₹140</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Hakka Noodles</span>
+                                                        <span class="text-primary">₹200</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Manchurian Noodles</span>
+                                                        <span class="text-primary">₹220</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Szechwan Noodles</span>
+                                                        <span class="text-primary">₹220</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Chinese Chopsuey</span>
+                                                        <span class="text-primary">₹220</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken American Chopsuey</span>
+                                                        <span class="text-primary">₹300</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Pokoda</span>
+                                                        <span class="text-primary">₹200</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Dry Fry</span>
+                                                        <span class="text-primary">₹220</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken PopCorn</span>
+                                                        <span class="text-primary">₹260</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Drums of Heaven</span>
+                                                        <span class="text-primary">₹240</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/gravy.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Szechwan Gravy</span>
+                                                        <span class="text-primary">₹300</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/gravy.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chilli Chicken Gravy</span>
+                                                        <span class="text-primary">₹220</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/gravy.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Gravy</span>
+                                                        <span class="text-primary">₹280</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Masala</span>
+                                                        <span class="text-primary">₹300</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Do Pyaza</span>
+                                                        <span class="text-primary">₹300</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Bharta</span>
+                                                        <span class="text-primary">₹320</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Maharaja</span>
+                                                        <span class="text-primary">₹320</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Labardar</span>
+                                                        <span class="text-primary">₹340</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Butter Masala</span>
+                                                        <span class="text-primary">₹350</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Local Fish Tenga Curry</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Local Fish Masala Curry</span>
+                                                        <span class="text-primary">₹140</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Mutton Curry</span>
+                                                        <span class="text-primary">₹300</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Mutton Kosha</span>
+                                                        <span class="text-primary">₹320</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Mutton Masala</span>
+                                                        <span class="text-primary">₹320</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Mutton Rogan Josh</span>
+                                                        <span class="text-primary">₹350</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-3" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/shake.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Vanilla Milk Shake</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/shake.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Mango Milk Shake</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/shake.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Banana Milk Shake</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/shake1.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Dragon Milk Shake</span> 
+                                                        <span class="text-primary">₹150</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/shake1.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chocolate Milk Shake</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span> Butterscotch</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Strawberry</span>
+                                                        <span class="text-primary">₹120</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Cold Coffee</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span> Falooda </span>
+                                                        <span class="text-primary">₹150</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Oreo Milk Shake</span>
+                                                        <span class="text-primary">₹130</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Lime Fizz</span>
+                                                        <span class="text-primary">₹90</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Cola Fizz</span>
+                                                        <span class="text-primary">₹90</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Orange Fizz</span>
+                                                        <span class="text-primary">₹90</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Apple</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Orange</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Mousombi</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span> Pineapple</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span> Promoganate</span>
+                                                        <span class="text-primary">₹90</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span> Mango</span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Watermelon</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Grap</span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Dragon Juice</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Orange Punch</span>
+                                                        <span class="text-primary">₹70</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Fresh Lime Soda</span>
+                                                        <span class="text-primary">₹50</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Fresh Lime Water</span>
+                                                        <span class="text-primary">₹30</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/soup.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Masala Cold Drinks</span>
+                                                        <span class="text-primary">₹60</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                              
+                                      <!-- done -->
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-4" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Sandwich</span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Veg Sandwich </span>
+                                                        <span class="text-primary">₹60</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Paneer Cheese Sandwich</span>
+                                                        <span class="text-primary">₹90</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Pizza </span> 
+                                                        <span class="text-primary">₹150</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-5.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>veg pizza</span>
+                                                        <span class="text-primary">₹100</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chicken Burger </span>
+                                                        <span class="text-primary">₹80</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>veg burger</span>
+                                                        <span class="text-primary">₹60</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                                </div>
+                                
+                                <div id="tab-5" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Vanila</span>
+                                                        <span class="text-primary">₹50</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Chocolate</span>
+                                                        <span class="text-primary">₹50</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/ice.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Butter Scotch</span>
+                                                        <span class="text-primary">₹50</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/ice.avif" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Strawberry</span>
+                                                        <span class="text-primary">₹50</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>All American Banana Split</span>
+                                                        <span class="text-primary">₹90</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-7.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>Kamakshee Special Faluda</span>
+                                                        <span class="text-primary">₹170</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="tab-6" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>VEG. MANCHURIAN </span>
+                                                        <span class="text-primary">₹200</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/gravy.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>CHILLI PANEER GRAVY</span>
+                                                        <span class="text-primary">₹250</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/gravy.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PANEER SCHEZWAN GRAVY</span>
+                                                        <span class="text-primary">₹270</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-4.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>CHICKEN MANCHURIAN </span> 
+                                                        <span class="text-primary">₹260</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/gravy.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>CHILLI CHICKEN GRAVY</span>
+                                                        <span class="text-primary">₹280</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>MATAR PANEER</span>
+                                                        <span class="text-primary">₹200</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span> PANEER DO PYAZA</span>
+                                                        <span class="text-primary">₹250</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span> KADAI PANEER</span>
+                                                        <span class="text-primary">₹250</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PALAK PANEER</span>
+                                                        <span class="text-primary">₹250</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PANEER LABABDAR</span>
+                                                        <span class="text-primary">₹280</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PANEER PASANDA</span>
+                                                        <span class="text-primary">₹300</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>PANEER BUTTER MASALA</span>
+                                                        <span class="text-primary">₹300</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex align-items-center">
+                                                <img class="flex-shrink-0 img-fluid rounded" src="img/menu-6.jpg" alt="" style="width: 80px;">
+                                                <div class="w-100 d-flex flex-column text-start ps-4">
+                                                    <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                        <span>SHAHI PANEER</span>
+                                                        <span class="text-primary">₹320</span>
+                                                    </h6>
+                                                    <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div id="tab-7" class="tab-pane fade show p-0">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>DRY PAPAD</span>
+                                                    <span class="text-primary">₹15</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/menu-3.jpg" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>FRY PAPAD</span>
+                                                    <span class="text-primary">₹20</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/salad.png" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>MASALA PAPAD</span>
+                                                    <span class="text-primary">₹50</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/salad.png" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>CUCUMBER SALAD</span>
+                                                    <span class="text-primary">₹60</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/salad.png" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>GREEN SALAD</span>
+                                                    <span class="text-primary">₹80</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/salad.png" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>VEGETABLE SALAD</span>
+                                                    <span class="text-primary">₹100</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/salad.png" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>FRUITS SALAD</span>
+                                                    <span class="text-primary">₹120</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>CUCUMBER RAITA</span>
+                                                    <span class="text-primary">₹80</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>ONION RAITA</span>
+                                                    <span class="text-primary">₹80</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img class="flex-shrink-0 img-fluid rounded" src="img/menu-8.jpg" alt="" style="width: 80px;">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h6 class="d-flex justify-content-between border-bottom pb-2">
+                                                    <span>BOONDI RAITA</span>
+                                                    <span class="text-primary">₹100</span>
+                                                </h6>
+                                                <!-- <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu End -->
+        <!-- Menu End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Reservation</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Guwahati, 9th mile Hastinapur</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7575952432</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>contact@kkwebmart.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
+                        <h6 class="text-light fw-normal">Monday - Saturday</h6>
+                        <p>09AM - 09PM</p>
+                        <h6 class="text-light fw-normal">Sunday</h6>
+                        <p>10AM - 08PM</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <!-- <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p> -->
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Kk WEBMART Software Agency</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://kkwebmart">KK WEBMART</a><br><br>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+
+ 
+    <script>
+        function filterMenu() {
+            // Get the search query
+            let query = document.getElementById('searchQuery').value.toLowerCase();
+            // Get all menu items
+            let items = document.querySelectorAll('.menu-item');
+    
+            // Loop through the menu items
+            items.forEach(item => {
+                // Get the item name
+                let itemName = item.getAttribute('data-name').toLowerCase();
+                // Remove any existing highlight
+                item.classList.remove('highlight');
+                
+                // Check if item name matches the query
+                if (itemName.includes(query) && query !== "") {
+                    // Add the highlight class
+                    item.classList.add('highlight');
+                }
+            });
+        }
+    </script>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function scrollToBottom() {
+            window.scrollBy({
+            top: 600,  // Scrolls down by 500px from the current position
+            behavior: 'smooth'  // Smooth scrolling effect
+          });
+        }
+      </script>
+      
+</body>
+
+</html>
